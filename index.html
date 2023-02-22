@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>DHIAA</h2>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" placeholder="اسم المنتح" id="title" >
+            <div class="price">
+                <input type="number"  id="price" placeholder="سعر المنتح" onkeyup="getTotal()">
+                <input type="number"  id="taxes" placeholder="الضريبة" onkeyup="getTotal()">
+                <input type="number"  id="ads" placeholder="الاعلانات" onkeyup="getTotal()">
+                <input type="number"  id="discount" placeholder="نسبة الخصم" onkeyup="getTotal()">
+                <small id="total"> </small>
+            </div>
+            <input type="number" placeholder="عدد المنتجات" id="count" >
+            <input type="text" placeholder="نوع المنتح" id="category" >
+            <button id="submit">إضافة</button>
+
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <div class="btnsearch">
+                    <button id="searchTitle" onclick="getsearchMood(this.id)">البحث باسم المنتج</button>
+                    <button id="searchTcategory" onclick="getsearchMood(this.id)"> البحث نوع المنتج</button>
+                </div>
+                <input type="text " id="search" placeholder="بحث" onkeyup="searchData(this.value)">
+            </div>
+        </div>
+        <div id="deleteAll">
+
+        </div>
+        <div class="tableh">
+            <table >
+                <tr>
+                    <th>رقم المنتج</th>
+                    <th>اسم المنتج</th>
+                    <th>سعر المنتج</th>
+                    <th>الضريبة</th>
+                    <th>الاعلانات</th>
+                    <th>نسبة الخصم</th>
+                    <th>النتيجة</th>
+                    <th>نوع المنتج</th>
+                    <th>تعديل</th>
+                    <th>حذف</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./javascript/java.js"></script>
+</body>
+</html>
